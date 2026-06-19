@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bolão SMS | Admin</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div><strong>⚙️ Administração</strong></div>
+    <nav>
+      <a href="bolao.html">Palpites</a>
+      <a href="ranking.html">Ranking</a>
+      <button onclick="sair()">Sair</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Lançar resultados</h1>
+      <p>Atualize os placares reais dos jogos.</p>
+      <span class="sponsor">Prêmio: uma pinha  • Aceita patrocinadores</span>
+    </section>
+
+    <section id="adminJogos" class="grid"></section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

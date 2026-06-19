@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bolão SMS | Ranking</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div><strong>🏆 Ranking</strong></div>
+    <nav>
+      <a href="bolao.html">Palpites</a>
+      <a href="ranking.html">Ranking</a>
+      <a href="admin.html" id="linkAdmin" class="hidden">Admin</a>
+      <button onclick="sair()">Sair</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Classificação geral</h1>
+      <p>Placar exato: 10 pontos. Acertou vencedor ou empate: 5 pontos.</p>
+      <span class="sponsor">Prêmio: uma pinha 🍍 • Aceita patrocinadores</span>
+    </section>
+
+    <section id="ranking"></section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/ranking.js"></script>
+</body>
+</html>

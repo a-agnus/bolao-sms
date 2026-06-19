@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bolão SMS | Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="login-body">
+  <main class="auth-card">
+    <div class="logo-area">
+      <div class="ball">⚽</div>
+      <h1>Bolão SMS</h1>
+      <p>Palpite nos jogos do Brasil. Prêmio principal: uma pinha.</p>
+      <span class="sponsor-login">Aceita patrocinadores</span>
+    </div>
+
+    <label>Código de acesso</label>
+    <input type="text" id="codigo" placeholder="Digite seu código" />
+    <button onclick="entrar()">Entrar</button>
+    <p id="mensagem" class="mensagem"></p>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>

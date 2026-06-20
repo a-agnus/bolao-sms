@@ -1,6 +1,9 @@
 function calcularPontos(palpite, jogo) {
-  if (jogo.gols_a_real === null || jogo.gols_b_real === null) return 0;
+  if (jogo.gols_a_real === null || jogo.gols_b_real === null) {
+    return 0;
+  }
 
+  
   if (
     palpite.gols_a === jogo.gols_a_real &&
     palpite.gols_b === jogo.gols_b_real
@@ -8,17 +11,31 @@ function calcularPontos(palpite, jogo) {
     return 10;
   }
 
-  const resultadoPalpite =
+  const vencedorPalpite =
     palpite.gols_a > palpite.gols_b ? "A" :
-    palpite.gols_a < palpite.gols_b ? "B" : "E";
+    palpite.gols_a < palpite.gols_b ? "B" :
+    "EMPATE";
 
-  const resultadoReal =
+  const vencedorReal =
     jogo.gols_a_real > jogo.gols_b_real ? "A" :
-    jogo.gols_a_real < jogo.gols_b_real ? "B" : "E";
+    jogo.gols_a_real < jogo.gols_b_real ? "B" :
+    "EMPATE";
 
-  return resultadoPalpite === resultadoReal ? 5 : 0;
+  
+  if (vencedorPalpite === "EMPATE" && vencedorReal === "EMPATE") {
+    return 2;
+  }
+
+  
+  if (
+    vencedorPalpite === vencedorReal &&
+    vencedorPalpite !== "EMPATE"
+  ) {
+    return 6;
+  }
+
+  return 0;
 }
-
 async function carregarRanking() {
   const { data: palpites, error } = await supabaseClient
     .from("palpites")
